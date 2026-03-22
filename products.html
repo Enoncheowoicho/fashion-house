@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Veloura Fashion House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Spring Collection Launch - March 30, 2026 | Exclusive VIP Event - April 15, 2026 | Fashion Week Paris - May 20-25, 2026 | Summer Sale Starting June 1st</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">VELOURA</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="team.html">Board of Trustees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Appointments</a></li>
+                <li><a href="dom.html">DOM Demo</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Collection</h1>
+            <p>Discover timeless pieces crafted with precision and passion</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="clothing">Clothing</button>
+                <button class="filter-btn" data-category="shoes">Shoes</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Clothing -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);">
+                        <div class="product-placeholder">Evening Gown</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Midnight Elegance Gown</h3>
+                        <p class="product-category">Clothing</p>
+                        <p class="product-price">$2,850</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image" style="background: linear-gradient(135deg, #f5f5f5 0%, #d4af37 100%);">
+                        <div class="product-placeholder">Blazer</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Golden Hour Blazer</h3>
+                        <p class="product-category">Clothing</p>
+                        <p class="product-price">$1,650</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);">
+                        <div class="product-placeholder">Silk Dress</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pearl Silk Midi Dress</h3>
+                        <p class="product-category">Clothing</p>
+                        <p class="product-price">$1,890</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image" style="background: linear-gradient(135deg, #2c2c2c 0%, #000000 100%);">
+                        <div class="product-placeholder">Suit</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Onyx Power Suit</h3>
+                        <p class="product-category">Clothing</p>
+                        <p class="product-price">$2,450</p>
+                    </div>
+                </div>
+
+                <!-- Shoes -->
+                <div class="product-card" data-category="shoes">
+                    <div class="product-image" style="background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);">
+                        <div class="product-placeholder">Heels</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Stiletto Heels</h3>
+                        <p class="product-category">Shoes</p>
+                        <p class="product-price">$780</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="shoes">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);">
+                        <div class="product-placeholder">Loafers</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Italian Leather Loafers</h3>
+                        <p class="product-category">Shoes</p>
+                        <p class="product-price">$650</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="shoes">
+                    <div class="product-image" style="background: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%);">
+                        <div class="product-placeholder">Sneakers</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Canvas Sneakers</h3>
+                        <p class="product-category">Shoes</p>
+                        <p class="product-price">$520</p>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" style="background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);">
+                        <div class="product-placeholder">Handbag</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxe Leather Handbag</h3>
+                        <p class="product-category">Accessories</p>
+                        <p class="product-price">$980</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" style="background: linear-gradient(135deg, #d4af37 0%, #c9a961 100%);">
+                        <div class="product-placeholder">Watch</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Heritage Gold Watch</h3>
+                        <p class="product-category">Accessories</p>
+                        <p class="product-price">$3,200</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" style="background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 100%);">
+                        <div class="product-placeholder">Sunglasses</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Aviator Sunglasses</h3>
+                        <p class="product-category">Accessories</p>
+                        <p class="product-price">$420</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" style="background: linear-gradient(135deg, #8b7355 0%, #654321 100%);">
+                        <div class="product-placeholder">Belt</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Signature Leather Belt</h3>
+                        <p class="product-category">Accessories</p>
+                        <p class="product-price">$340</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);">
+                        <div class="product-placeholder">Scarf</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Silk Evening Scarf</h3>
+                        <p class="product-category">Accessories</p>
+                        <p class="product-price">$280</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>VELOURA</h3>
+                    <p>Redefining luxury fashion since 2015</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="team.html">Board of Trustees</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@veloura.fashion</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Fashion Ave, New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Veloura Fashion House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

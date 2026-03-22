@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demonstration - Veloura Fashion House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Spring Collection Launch - March 30, 2026 | Exclusive VIP Event - April 15, 2026 | Fashion Week Paris - May 20-25, 2026 | Summer Sale Starting June 1st</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">VELOURA</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="team.html">Board of Trustees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Appointments</a></li>
+                <li><a href="dom.html" class="active">DOM Demo</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>DOM Manipulation Demo</h1>
+            <p>Interactive examples of JavaScript DOM manipulation</p>
+        </div>
+    </section>
+
+    <!-- DOM Demo Section -->
+    <section class="dom-section">
+        <div class="container">
+            <!-- Demo 1: Text Manipulation -->
+            <div class="dom-demo-card">
+                <h2>1. Text Content Manipulation</h2>
+                <p class="demo-description">Click the button to change the text below using <code>textContent</code></p>
+                <div class="demo-area">
+                    <p id="demoText" class="demo-output">Original Text: Welcome to Veloura!</p>
+                    <button onclick="changeText()" class="btn btn-secondary">Change Text</button>
+                </div>
+            </div>
+
+            <!-- Demo 2: Style Manipulation -->
+            <div class="dom-demo-card">
+                <h2>2. Style Manipulation</h2>
+                <p class="demo-description">Click to modify CSS properties using <code>element.style</code></p>
+                <div class="demo-area">
+                    <div id="styleBox" class="style-box">Style Me!</div>
+                    <button onclick="changeStyle()" class="btn btn-secondary">Change Styles</button>
+                    <button onclick="resetStyle()" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <!-- Demo 3: Class Manipulation -->
+            <div class="dom-demo-card">
+                <h2>3. Class List Manipulation</h2>
+                <p class="demo-description">Toggle, add, and remove classes using <code>classList</code></p>
+                <div class="demo-area">
+                    <div id="classBox" class="class-box">Toggle My Class!</div>
+                    <button onclick="toggleClass()" class="btn btn-secondary">Toggle Highlight</button>
+                </div>
+            </div>
+
+            <!-- Demo 4: Creating Elements -->
+            <div class="dom-demo-card">
+                <h2>4. Creating New Elements</h2>
+                <p class="demo-description">Dynamically create and append elements using <code>createElement</code> and <code>appendChild</code></p>
+                <div class="demo-area">
+                    <div id="itemList" class="item-list"></div>
+                    <input type="text" id="itemInput" placeholder="Enter item name..." class="demo-input">
+                    <button onclick="addItem()" class="btn btn-secondary">Add Item</button>
+                    <button onclick="clearItems()" class="btn btn-secondary">Clear All</button>
+                </div>
+            </div>
+
+            <!-- Demo 5: Element Removal -->
+            <div class="dom-demo-card">
+                <h2>5. Removing Elements</h2>
+                <p class="demo-description">Click on any box to remove it using <code>remove()</code></p>
+                <div class="demo-area">
+                    <div id="boxContainer" class="box-container">
+                        <div class="removable-box" onclick="removeBox(this)">Click to Remove 1</div>
+                        <div class="removable-box" onclick="removeBox(this)">Click to Remove 2</div>
+                        <div class="removable-box" onclick="removeBox(this)">Click to Remove 3</div>
+                        <div class="removable-box" onclick="removeBox(this)">Click to Remove 4</div>
+                    </div>
+                    <button onclick="resetBoxes()" class="btn btn-secondary">Reset Boxes</button>
+                </div>
+            </div>
+
+            <!-- Demo 6: Query Selectors -->
+            <div class="dom-demo-card">
+                <h2>6. Query Selectors</h2>
+                <p class="demo-description">Select and highlight elements using <code>querySelector</code> and <code>querySelectorAll</code></p>
+                <div class="demo-area">
+                    <div class="query-grid">
+                        <div class="query-item" data-id="1">Item 1</div>
+                        <div class="query-item" data-id="2">Item 2</div>
+                        <div class="query-item" data-id="3">Item 3</div>
+                        <div class="query-item" data-id="4">Item 4</div>
+                    </div>
+                    <button onclick="highlightAll()" class="btn btn-secondary">Highlight All</button>
+                    <button onclick="highlightFirst()" class="btn btn-secondary">Highlight First</button>
+                    <button onclick="resetHighlight()" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <!-- Demo 7: Attributes -->
+            <div class="dom-demo-card">
+                <h2>7. Attribute Manipulation</h2>
+                <p class="demo-description">Modify element attributes using <code>setAttribute</code> and <code>getAttribute</code></p>
+                <div class="demo-area">
+                    <img id="demoImage" src="" alt="Demo Image" class="demo-image" style="display: none;">
+                    <p id="attrInfo" class="demo-output">No attributes set</p>
+                    <button onclick="setAttributes()" class="btn btn-secondary">Set Attributes</button>
+                    <button onclick="showAttributes()" class="btn btn-secondary">Show Attributes</button>
+                </div>
+            </div>
+
+            <!-- Demo 8: Event Listeners -->
+            <div class="dom-demo-card">
+                <h2>8. Event Listeners</h2>
+                <p class="demo-description">Add event listeners using <code>addEventListener</code></p>
+                <div class="demo-area">
+                    <div id="hoverBox" class="hover-box">Hover over me!</div>
+                    <p id="eventOutput" class="demo-output">No events yet...</p>
+                </div>
+            </div>
+
+            <!-- DOM Structure Explanation -->
+            <div class="dom-demo-card">
+                <h2>Understanding the DOM</h2>
+                <div class="dom-explanation">
+                    <p><strong>What is the DOM?</strong></p>
+                    <p>The Document Object Model (DOM) is a programming interface for HTML documents. It represents the page as a tree structure where each HTML element is a node.</p>
+
+                    <p><strong>DOM Tree Structure:</strong></p>
+                    <pre class="dom-tree">
+document
+  └── html
+      ├── head
+      │   ├── title
+      │   └── link (stylesheet)
+      └── body
+          ├── nav
+          │   └── ul
+          │       └── li → a
+          ├── section
+          │   └── div.container
+          │       └── h1
+          └── footer
+                    </pre>
+
+                    <p><strong>Common DOM Methods:</strong></p>
+                    <ul class="dom-methods-list">
+                        <li><code>getElementById()</code> - Select element by ID</li>
+                        <li><code>querySelector()</code> - Select first matching element</li>
+                        <li><code>querySelectorAll()</code> - Select all matching elements</li>
+                        <li><code>createElement()</code> - Create new element</li>
+                        <li><code>appendChild()</code> - Add child element</li>
+                        <li><code>remove()</code> - Remove element from DOM</li>
+                        <li><code>addEventListener()</code> - Attach event handler</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>VELOURA</h3>
+                    <p>Redefining luxury fashion since 2015</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="team.html">Board of Trustees</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@veloura.fashion</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Fashion Ave, New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Veloura Fashion House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
